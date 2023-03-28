@@ -1,3 +1,5 @@
+Collaborating with dylanmlilo to complete the printf project
+
 Writing your own printf function
 
 0. Write a function that produces output according to a format
