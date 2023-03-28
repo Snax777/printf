@@ -6,7 +6,7 @@
 * @c: char types.
 * @buffer: Buffer array to handle print
 * @flags: Calculates active flags.
-* @width: acquire width.
+* @width: get width.
 * @precision: precision specifier
 * @size: Size specifier
 ** Return: Number of chars printed.
@@ -43,7 +43,7 @@ return (write(1, &buffer[0], 1));
 * @ind: char types.
 * @buffer: Buffer array to handle print
 * @flags: Calculates active flags
-* @width: acquire width.
+* @width: get width.
 * @precision: precision specifier
 * @size: Size specifier
 ** Return: Number of chars printed.
@@ -97,7 +97,7 @@ if (width > length)
 for (i = 1; i < width - length + 1; i++)
 buffer[i] = padd;
 buffer[i] = '\0';
-if (flags & F_MINUS && padd == ' ')/* Asign extra char to left of buffer */
+if (flags & F_MINUS && padd == ' ')/* Assign extra char to left of buffer */
 {
 if (extra_c)
 buffer[--ind] = extra_c;
@@ -157,7 +157,7 @@ if (width > length)
 for (i = 0; i < width - length; i++)
 buffer[i] = padd;
 buffer[i] = '\0';
-if (flags & F_MINUS) /* Asign extra char to left of buffer [buffer>padd]*/
+if (flags & F_MINUS) /* Assign extra char to left of buffer [buffer>padd]*/
 {
 return (write(1, &buffer[ind], length) + write(1, &buffer[0], i));
 }

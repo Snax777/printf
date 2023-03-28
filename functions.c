@@ -1,4 +1,4 @@
-#include "print.h"
+#include "main.h"
 /************************* PRINT CHAR *************************/
 /**
 * print_char - Prints a char
@@ -129,7 +129,7 @@ return (write_number(is_negative, i, buffer, flags, width, precision, size));
 * @types: Lista of arguments
 * @buffer: Buffer array to handle print
 * @flags: Calculates active flags
-* @width: acquire width.
+* @width: get width.
 * @precision: Precision specification
 * @size: Size specifier
 * Return: Numbers of char printed.
