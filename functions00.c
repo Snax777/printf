@@ -129,7 +129,7 @@ return (write_number(is_negative, i, buffer, flags, width, precision, size));
 * @types: Lista of arguments
 * @buffer: Buffer array to handle print
 * @flags: Calculates active flags
-* @width: get width.
+* @width: acquire width.
 * @precision: Precision specification
 * @size: Size specifier
 * Return: Numbers of char printed.

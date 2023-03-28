@@ -1,11 +1,12 @@
 #include "main.h"
+
 /************************* WRITE HANDLE *************************/
 /**
 * handle_write_char - Prints a string
 * @c: char types.
 * @buffer: Buffer array to handle print
 * @flags: Calculates active flags.
-* @width: get width.
+* @width: acquire width.
 * @precision: precision specifier
 * @size: Size specifier
 ** Return: Number of chars printed.
@@ -42,7 +43,7 @@ return (write(1, &buffer[0], 1));
 * @ind: char types.
 * @buffer: Buffer array to handle print
 * @flags: Calculates active flags
-* @width: get width.
+* @width: acquire width.
 * @precision: precision specifier
 * @size: Size specifier
 ** Return: Number of chars printed.
@@ -160,7 +161,7 @@ if (flags & F_MINUS) /* Asign extra char to left of buffer [buffer>padd]*/
 {
 return (write(1, &buffer[ind], length) + write(1, &buffer[0], i));
 }
-else /* Asign extra char to left of padding [padd>buffer]*/
+else /* Assign extra char to left of padding [padd>buffer]*/
 {
 return (write(1, &buffer[0], i) + write(1, &buffer[ind], length));
 } }
@@ -171,7 +172,7 @@ return (write(1, &buffer[ind], length));
 * @buffer: Arrays of chars
 * @ind: Index at which the number starts in the buffer
 * @length: Length of number
-* @width: Wwidth specifier
+* @width: Width specifier
 * @flags: Flags specifier
 * @padd: Char representing the padding
 * @extra_c: Char representing extra char
